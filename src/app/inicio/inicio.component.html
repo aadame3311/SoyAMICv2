@@ -1,0 +1,18 @@
+<div class="sub-nav-container">
+    <ul>
+        <li>
+            <a 
+                [ngClass]="checkCurrentSubRoute('delegaciones')" [routerLink]="['delegaciones']"
+            >Delegaciones</a>
+        </li>
+        
+        <li>
+            <a 
+                [ngClass]="checkCurrentSubRoute('directorio')" [routerLink]="['directorio']"
+            >Directorio</a>
+        </li>
+
+    </ul>
+</div>
+
+<router-outlet></router-outlet>

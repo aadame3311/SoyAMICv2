@@ -1,0 +1,8 @@
+.site-alert-text {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.site-alert.warning {
+    background-color: #ffc107;
+}

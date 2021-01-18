@@ -1,0 +1,27 @@
+import { NgModule } from '@angular/core';
+import { DelegacionesProfileComponent } from '../delegaciones/delegaciones-profile.component';
+import { DelegacionesComponent } from '../delegaciones/delegaciones.component';
+import { DirectorioComponent } from '../directorio/directorio.component';
+import { MapboxComponent } from '../shared/mapbox/mapbox.component';
+import { SharedModule } from '../shared/shared.module';
+import { InicioRoutingModule } from './inicio-routing.module';
+
+import { InicioComponent } from './inicio.component';
+
+@NgModule({
+    imports: [
+        InicioRoutingModule,
+        SharedModule,
+    ],
+    exports: [
+    ],
+    declarations: [
+        InicioComponent,
+        DelegacionesComponent,
+        DelegacionesProfileComponent,
+        DirectorioComponent,
+        MapboxComponent
+    ],
+    providers: [],
+})
+export class InicioModule { }
