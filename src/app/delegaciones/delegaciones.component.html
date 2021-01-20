@@ -1,5 +1,6 @@
-<app-mapbox></app-mapbox>
+<app-mapbox
+    (markerOnClick)='markerClickHandler($event)'></app-mapbox>
 
 <app-delegaciones-profile
-    [delegacion] = "delegacionProfile"
-></app-delegaciones-profile>
+    [ngStyle] = 'toggleProfileView()'
+    [delegacion] = 'delegacionProfile'></app-delegaciones-profile>

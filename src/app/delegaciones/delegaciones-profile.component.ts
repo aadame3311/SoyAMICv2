@@ -7,14 +7,13 @@ import { Component, OnInit, Input, Output } from '@angular/core';
 })
 export class DelegacionesProfileComponent implements OnInit {
 
-  @Input() delegacion : any = {
-    name: "Nuevo Leon",
-    email: "Cargando",
-    phone: "Cargando",
-    address: "Cargando"
-  }
+  @Input() delegacion : any 
 
-  constructor() { }
+  constructor() { 
+    if (typeof this.delegacion === "undefined") {
+      
+    }
+  }
 
   ngOnInit(): void {
   }

@@ -1,3 +1,4 @@
+import { NONE_TYPE } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 
@@ -8,15 +9,28 @@ import { Title } from '@angular/platform-browser';
 })
 export class DelegacionesComponent implements OnInit {
 
-  delegacionProfile : any = {
-    name: "Nuevo Leon",
-    email: "nuevoleon@delegacion.mx",
-    phone: "(123)421-1235",
-    address: "123 Distrito 5 Colonia 10 Monterrey, NL, Mexico 19920"
-  }
+  delegacionProfile : any 
+  profileVisible : boolean = false;
 
   constructor(private titleService : Title ) { 
     this.titleService.setTitle("soyAmic | Delegaciones")
+    this.delegacionProfile = {
+      name: "Cargando",
+      email: "Cargando",
+      phone: "Cargando",
+      address: "Cargando",
+      imageSrc: "https://amicstorage1.blob.core.windows.net/amicprofiles/default/profile_picture.jpg"
+    }
+  }
+
+  toggleProfileView() {
+    return {
+      display: (this.profileVisible)?'block':'none'
+    }
+  }
+  markerClickHandler(delegacion : any) {
+    this.profileVisible = true;
+    this.delegacionProfile = delegacion;
   }
 
   ngOnInit(): void {
