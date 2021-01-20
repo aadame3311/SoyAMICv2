@@ -2,4 +2,7 @@ img.profile-img {
     width: 100px;
     height: 100px;
 }
-
+.delegacion-profile {
+    display: grid;
+    grid-template-columns: 0.3fr ;
+}
