@@ -1,4 +1,4 @@
-import { environment } from '../../../environments/environment';
+import { environment } from './../../../environments/environment'
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import * as mapboxgl from 'mapbox-gl';
 
