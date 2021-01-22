@@ -55,7 +55,7 @@ export class MapboxComponent implements OnInit {
   ]
 
   constructor() {}
-
+  
   ngOnInit() {
     this.map = new mapboxgl.Map({
       accessToken: environment.mapbox.accessToken,

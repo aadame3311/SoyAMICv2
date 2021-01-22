@@ -8,11 +8,9 @@ import { Component, OnInit, Input, Output } from '@angular/core';
 export class DelegacionesProfileComponent implements OnInit {
 
   @Input() delegacion : any 
+  @Input() convenios : any
 
   constructor() { 
-    if (typeof this.delegacion === "undefined") {
-      
-    }
   }
 
   ngOnInit(): void {
