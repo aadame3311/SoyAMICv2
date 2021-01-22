@@ -10,7 +10,7 @@ on:
 
 jobs:
   build-and-deploy:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@master
@@ -31,5 +31,5 @@ jobs:
       with:
         app-name: 'soyamicv2'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_70c1918eef1b42a89ab7f52133268e9f }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_3c03a63e8a2e4a4996d965ceba975adf }}
         package: .
