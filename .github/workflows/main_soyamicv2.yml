@@ -31,5 +31,5 @@ jobs:
       with:
         app-name: 'soyamicv2'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_0d0020233d4f46eebedfdc201ef29cf2 }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_70c1918eef1b42a89ab7f52133268e9f }}
         package: .
