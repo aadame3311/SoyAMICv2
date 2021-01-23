@@ -67,21 +67,25 @@ export class MapboxComponent implements OnInit {
 
     // Set options
     for (let delegacion of this.delegaciones) {
-      let mapMarker = new mapboxgl.Marker({
-        draggable: false,
-        color: '#4285F4'
-      })
-        .setLngLat([delegacion.longitude, delegacion.latitude])
-        .addTo(this.map);
-      
-      let mapMarkerElement = mapMarker.getElement();
-      mapMarkerElement.addEventListener('click', () => {
-        console.log('test', delegacion.name);
+      //create marker element and attach css and event binders
+      let $marker = document.createElement('div');
+      $marker.className = 'custom-marker';
+      $marker.addEventListener('click', () => {
         this.markerOnClick.emit(delegacion);
       });
-      mapMarkerElement.addEventListener('mouseover', () => {
-        mapMarkerElement.style.cursor = 'pointer';
-      })
+
+      //can't add in css file since will be overwritten by the inline
+      //style attribute that mapbox adds
+      $marker.style.width = "50px";
+      $marker.style.height = "50px";
+      $marker.style.backgroundImage = "url('../../../assets/icons/logo_mapIcon.svg')";
+      $marker.style.backgroundSize = "cover";
+      $marker.style.cursor = "pointer";
+      
+      //use generated HTML element to create a mapbox map marker
+      new mapboxgl.Marker($marker)
+        .setLngLat([delegacion.longitude, delegacion.latitude])
+        .addTo(this.map);
     }
 
 
