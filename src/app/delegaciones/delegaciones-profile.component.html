@@ -20,13 +20,16 @@
     
     
         <div class="right-pane">
+            <h1>Convenios</h1>
             <ul class="convenio-list">
                 <li *ngFor="let convenio of convenios" class="convenio-item">
-                    <span>FileIconHere</span>
-                    <span>{{convenio.name}}</span>
-                    <span class="actions">
-                        <span>DownloadIconHere</span>
-                    </span>
+                    <div class="left">
+                        <div><i-feather style="width: 20px; height: 20px" name="file"></i-feather></div>
+                        <div class="file-name">{{convenio.name}}</div>
+                    </div>
+                    <div class="right">
+                        <i-feather style="width: 20px; height: 20px" name="download"></i-feather>
+                    </div>
                 </li>
             </ul>
         </div>

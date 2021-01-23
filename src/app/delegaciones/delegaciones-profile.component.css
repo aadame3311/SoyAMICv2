@@ -48,11 +48,22 @@ img.profile-img {
 .convenio-item {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 
-    padding: 16px;
+    padding: 0 8px 0 8px;
     margin-top: 8px;
     border-radius: 8px;
     background-color: white;
+}
+.left {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+}
+.right {
+    display: inline-flex;
+    align-items: center;
+    margin: 0;
 }
 .convenio-item * {
     margin: 8px;
@@ -60,4 +71,8 @@ img.profile-img {
 
 .actions {
     text-align: right;
+}
+.file-name {
+    display: inline-flex;
+    align-items: center;
 }
