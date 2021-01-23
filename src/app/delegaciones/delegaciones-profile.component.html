@@ -1,25 +1,27 @@
 <div class="delegacion-profile">
     
-    <div class="profile-header">
-        <span>{{delegacion.name}}</span>
-        <button class="btn btn-primary">Afiliate</button>
-    </div>
-    <hr/>
+    
 
     <div class="grid-container">
 
-        <div class="left-pane">
-            <img class="profile-img" [src]='delegacion.imageSrc' />
-    
-            <ul class="profile-info">
-                <li><span class="info-header">correo:</span> {{delegacion.email}}</li>
-                <li><span class="info-header">telefono:</span> {{delegacion.phone}}</li>
-                <li><span class="info-header">direccion:</span> {{delegacion.address}}</li>
-            </ul>
+        <div class="section profile-section">
+            <div [style.background-image]="'url(' + delegacion.imageSrc +')'" class="profile-img"></div>
+            <div class="profile-details">
+                <div class="profile-header">
+                    <span>{{delegacion.name}}</span>
+                    <button class="btn btn-primary">Afiliate</button>
+                </div>
+                <hr/>
+                <ul class="profile-info">
+                    <li><span class="info-header">correo:</span> {{delegacion.email}}</li>
+                    <li><span class="info-header">telefono:</span> {{delegacion.phone}}</li>
+                    <li><span class="info-header">direccion:</span> {{delegacion.address}}</li>
+                </ul>
+            </div>
         </div>
     
     
-        <div class="right-pane">
+        <div class="section details-section">
             <h1>Convenios</h1>
             <ul class="convenio-list">
                 <li *ngFor="let convenio of convenios" class="convenio-item">
