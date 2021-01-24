@@ -1,28 +1,39 @@
 .profile-img {
-    width: 12vw;
-    height: 12vw;
-    border-radius: 50%;
+    width: 10vw;
+    height: 10vw;
+    
     background-size: cover;
     background-position: center;
     padding: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.33);
 }
 .delegacion-profile {
     margin-top: 16px;
 }
+
 .grid-container {
     margin-top: 16px;
     display: grid;
-    grid-template-rows: 0.5fr 1fr;
+    grid-template-rows: auto;
 }
 .profile-details {
-    padding: 16px;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 0.2fr 1fr;
 }
 .profile-info {
+    font-size: 10px;
     list-style-type: none;
     margin-top: 8px;
     padding: 8px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    
+}
+.about {
+    background-color: white;
+    padding: 64px;
+}
+.about-text {
+    margin-left: 16px;
 }
 .profile-header {
     font-weight: bold;
@@ -40,11 +51,32 @@
 .profile-info li {
     margin-bottom: 8px;
 }
+.profile-details .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+}
+.profile-details .body {
+    display: grid;
+    padding: 8px;
+    grid-template-columns: 0.35fr 0.35fr;
+}
+.field {
+    opacity: 0.5;
+    margin-right: 16px;
+}
+.value {
+    font-weight: bold;
+}
 
+.header-title {
+    font-size: 2vw;
+}
 .profile-section {
-    padding: 16px;
-    border-radius: 16px;
-
+    background-color: white;
+    padding: 64px;
     display: grid;
     grid-template-columns: 0.10fr 1fr;
     align-items: center;
@@ -54,7 +86,7 @@
     font-weight: bold;
 }
 .section {
-    margin: 8px;
+    margin-bottom: 16px;
 }
 
 .convenio-list {
@@ -68,7 +100,6 @@
 
     padding: 0 8px 0 8px;
     margin-top: 8px;
-    border-radius: 8px;
     background-color: white;
 }
 .left {
@@ -85,9 +116,7 @@
     margin: 8px;
 }
 
-.actions {
-    text-align: right;
-}
+
 .file-name {
     display: inline-flex;
     align-items: center;

@@ -9,6 +9,7 @@ export class DelegacionesProfileComponent implements OnInit {
 
   @Input() delegacion : any 
   @Input() convenios : any
+  iconSize : number = 10
 
   constructor() { 
   }
