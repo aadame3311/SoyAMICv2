@@ -1,20 +1,27 @@
 .navbar-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+
     padding: 16px;
-    width: 50%;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    background-color: white;
+    z-index: 100;
 }
 .brand {
     position: absolute;
     left: 16px;
 }
 .nav-elements {
-    width: 25%;
-    margin: 0 !important;
+    width: 10vw;
 }
 ul {
+    width: 100%;
     padding: 0 !important;
     margin-bottom: 0 !important;
 }
@@ -35,7 +42,6 @@ a {
     display: inline;
     text-align: center;
 }
-
 hr.nav-underline {
     height: .25rem;
     width: 50%;
@@ -47,17 +53,19 @@ hr.nav-underline {
 }
 
 .site-container {
+    margin-top: 64px;
     display: grid;
-    grid-template-columns: 0.3fr 1fr 0.3fr;
+    gap: 16px;
+    grid-template-columns: 0.1fr 1fr;
 }
 
 .navigation-pane {
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 8px;
 }
 .router-pane {
-    padding: 8px;
+    overflow: auto;
+    
 }
