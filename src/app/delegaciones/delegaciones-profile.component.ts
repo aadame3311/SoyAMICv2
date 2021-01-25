@@ -9,13 +9,14 @@ export class DelegacionesProfileComponent implements OnInit {
 
   @Input() delegacion : any 
   @Input() convenios : any
+  @Input() posts : any
   iconSize : number = 10
 
   constructor() { 
   }
 
   ngOnInit(): void {
-    
+    console.log(this.delegacion.id);
   }
 
 }

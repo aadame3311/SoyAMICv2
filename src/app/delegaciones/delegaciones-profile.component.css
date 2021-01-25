@@ -14,7 +14,15 @@
 .grid-container {
     margin-top: 16px;
     display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
+    grid-template-areas: 
+        "profile-header profile-header profile-header profile-header"
+        "about about about president"
+        "posts posts posts posts"
+        "convenios convenios convenios convenios"
+    ;
 }
 .profile-details {
     height: 100%;
@@ -30,11 +38,21 @@
     
 }
 .about {
+    grid-area: about;
+}
+
+.about-text {
+    grid-column: 1 / span 3;
+}
+.posts-container { grid-area: posts; }
+.section {
     background-color: white;
+    border:0.5px solid rgba(0, 0, 0, 0.1);
     padding: 64px;
 }
-.about-text {
-    margin-left: 16px;
+.president {grid-area: president;}
+.president .profile-img {
+    margin: auto;
 }
 .profile-header {
     font-weight: bold;
@@ -68,14 +86,13 @@
     opacity: 0.5;
     margin-right: 16px;
 }
-.value {
-    font-weight: bold;
-}
+.value { font-weight: bold; }
 
 .header-title {
     font-size: 2vw;
 }
-.profile-section {
+.header-section {
+    grid-area: profile-header;
     background-color: white;
     padding: 64px;
     display: grid;
@@ -83,14 +100,10 @@
     grid-template-columns: 0.10fr 1fr;
     align-items: center;
 }
-.details-section {}
-.info-header {
-    font-weight: bold;
-}
-.section {
-    margin-bottom: 16px;
-}
 
+.info-header { font-weight: bold; }
+
+.convenios { grid-area: convenios; }
 .convenio-list {
     list-style-type: none;
     padding: 0 !important;
@@ -104,6 +117,8 @@
     margin-top: 8px;
     background-color: white;
 }
+.convenio-item * { margin: 8px; }
+
 .left {
     display: flex;
     flex-direction: row;
@@ -113,9 +128,6 @@
     display: inline-flex;
     align-items: center;
     margin: 0;
-}
-.convenio-item * {
-    margin: 8px;
 }
 
 

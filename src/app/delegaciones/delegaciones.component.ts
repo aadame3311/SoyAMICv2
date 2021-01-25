@@ -11,6 +11,7 @@ export class DelegacionesComponent implements OnInit {
 
   delegacionProfile : any 
   convenios : any[] = [{}]
+  posts : any[] = [{}]
   profileVisible : boolean = false;
 
   constructor(private titleService : Title ) { 
@@ -50,6 +51,18 @@ export class DelegacionesComponent implements OnInit {
         name: "convenio 3",
       },
 
+    ];
+
+    this.posts = [
+      {
+        id: 1,
+        body: `
+          Lorem ipsum dolor sit amet, 
+          consectetur adipiscing elit, 
+          sed do eiusmod tempor incididunt 
+          ut labore et dolore magna aliqua.
+        `
+      }
     ]
   }
 
