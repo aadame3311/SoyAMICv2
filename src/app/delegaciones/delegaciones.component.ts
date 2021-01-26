@@ -56,13 +56,28 @@ export class DelegacionesComponent implements OnInit {
     this.posts = [
       {
         id: 1,
+        source: 'facebook',
+        postDate: "1d",
         body: `
           Lorem ipsum dolor sit amet, 
           consectetur adipiscing elit, 
           sed do eiusmod tempor incididunt 
           ut labore et dolore magna aliqua.
-        `
+        `,
+      },
+      
+      {
+        id: 2,
+        source: 'twitter',
+        postDate: "2d",
+        body: `
+          Lorem ipsum dolor sit amet, 
+          consectetur adipiscing elit, 
+          sed do eiusmod tempor incididunt 
+          ut labore et dolore magna aliqua.
+        `,
       }
+
     ]
   }
 

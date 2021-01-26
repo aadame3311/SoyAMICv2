@@ -1,13 +1,12 @@
 import { NgModule } from '@angular/core';
 import { FeatherModule } from 'angular-feather';
-import { File, Download, MapPin, Phone, Mail } from 'angular-feather/icons';
+import { File, Download, Facebook, Twitter } from 'angular-feather/icons';
 
 const icons = {
   File,
-  MapPin, 
-  Phone, 
-  Mail,
-  Download
+  Download,
+  Facebook,
+  Twitter,
 };
 
 

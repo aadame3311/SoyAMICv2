@@ -48,8 +48,16 @@
         <div class="posts-container">
             <h1>Noticias</h1>
             <div *ngFor="let post of posts" class="posts">
-                <div class="post">
-                    {{post.body}}
+                <div class="post list-item">
+                    <div class="stick-left">
+                        <i-feather name={{post.source}}></i-feather>
+                        <span class="ml-3 body">
+                            {{post.body}}
+                        </span>
+                    </div>
+                    <div class="timestamp">
+                        <span>{{post.postDate}}</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -57,10 +65,10 @@
         <div class="convenios">
             <h1>Convenios</h1>
             <ul class="convenio-list">
-                <li *ngFor="let convenio of convenios" class="convenio-item">
+                <li *ngFor="let convenio of convenios" class="convenio-item list-item">
                     <div class="left">
                         <div><i-feather style="width: 20px; height: 20px" name="file"></i-feather></div>
-                        <div class="file-name">{{convenio.name}}</div>
+                        <div class="ml-3 file-name">{{convenio.name}}</div>
                     </div>
                     <div class="right">
                         <i-feather style="width: 20px; height: 20px" name="download"></i-feather>

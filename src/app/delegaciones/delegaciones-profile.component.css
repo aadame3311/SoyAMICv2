@@ -24,6 +24,19 @@
         "convenios convenios convenios convenios"
     ;
 }
+.timestamp {
+    font-size: 10px;
+    opacity: 0.33;
+}
+.list-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 32px;
+    margin-bottom: 16px;
+    background-color: white;
+    border: 0.5px solid rgba(0, 0, 0, 0.1)
+}
 .profile-details {
     height: 100%;
     display: grid;
@@ -108,16 +121,6 @@
     list-style-type: none;
     padding: 0 !important;
 }
-.convenio-item {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-    padding: 0 8px 0 8px;
-    margin-top: 8px;
-    background-color: white;
-}
-.convenio-item * { margin: 8px; }
 
 .left {
     display: flex;
