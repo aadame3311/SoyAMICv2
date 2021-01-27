@@ -19,7 +19,8 @@
     grid-template-rows: auto;
     grid-template-areas: 
         "profile-header profile-header profile-header profile-header"
-        "about about about president"
+        "about about about about"
+        "directorio directorio directorio directorio"
         "posts posts posts posts"
         "convenios convenios convenios convenios"
     ;
@@ -50,10 +51,8 @@
     padding: 8px;
     
 }
-.about {
-    grid-area: about;
-}
-
+.about { grid-area: about; }
+.directorio {grid-area: directorio; }
 .about-text {
     grid-column: 1 / span 3;
 }

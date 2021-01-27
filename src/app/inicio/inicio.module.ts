@@ -6,6 +6,7 @@ import { IconsModule } from '../shared/icons/icons.module';
 import { MapboxComponent } from '../shared/mapbox/mapbox.component';
 import { SharedModule } from '../shared/shared.module';
 import { InicioRoutingModule } from './inicio-routing.module';
+import { FormsModule }   from '@angular/forms';
 
 import { InicioComponent } from './inicio.component';
 
@@ -14,6 +15,7 @@ import { InicioComponent } from './inicio.component';
         InicioRoutingModule,
         SharedModule,
         IconsModule,
+        FormsModule
     ],
     exports: [
     ],
@@ -22,7 +24,8 @@ import { InicioComponent } from './inicio.component';
         DelegacionesComponent,
         DelegacionesProfileComponent,
         DirectorioComponent,
-        MapboxComponent
+        MapboxComponent,
+        
     ],
     providers: [],
 })

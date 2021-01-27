@@ -1,1 +1,17 @@
-<p>directorio works!</p>
+<form class="form-group" 
+    #f="ngForm" 
+    (ngSubmit)="searchAsociados(f, $event, name.value, especialidadId.value)">
+    <div class="filters">
+        <div class="search-bar">
+            <input name="name" #name="ngModel" ngModel type="text" class="form-control" placeholder="Nombre de Asociado">
+        </div>
+        <div class="especialidad">
+            <input name="especialidadId" #especialidadId="ngModel" ngModel type="text" class="form-control" placeholder="Especialidad">
+        </div>
+        
+        <div class="search">
+            <button type="submit" class="btn btn-primary">Buscar</button>
+        </div>
+
+    </div>
+</form>

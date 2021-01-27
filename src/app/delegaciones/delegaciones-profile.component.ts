@@ -20,16 +20,16 @@ export class DelegacionesProfileComponent implements OnInit {
     if (obj.classList.contains('btn-outline-secondary')) {
       //follow
       obj.classList.remove('btn-outline-secondary');
-      obj.classList.add('btn-success');
+      obj.classList.add('btn-primary');
     } else {
       //unfollow
-      obj.classList.remove('btn-success');
+      obj.classList.remove('btn-primary');
       obj.classList.add('btn-outline-secondary');
     }
   }
 
   getFollowStyling(userId : String, delegacionId : String) : String {
-    return (true)? "btn-success" : "btn-outline-secondary" 
+    return (true)? "btn-primary" : "btn-outline-secondary" 
   }
   
   constructor() { 
