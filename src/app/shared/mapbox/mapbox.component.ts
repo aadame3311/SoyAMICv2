@@ -16,7 +16,7 @@ export class MapboxComponent implements OnInit {
   
   delegaciones : any = [
     {
-      id: 1,
+      id: "1",
       name: "Nuevo Leon",
       city: "Monterrey", 
       state: "Nuevo Leon",
@@ -28,7 +28,7 @@ export class MapboxComponent implements OnInit {
       latitude: 25.6866,
     },
     {
-      id: 2,
+      id: "2",
       name: "Yucatán",
       city: "Mérida", 
       state: "Yucatán",
@@ -40,7 +40,7 @@ export class MapboxComponent implements OnInit {
       latitude: 21.007949
     },
     {
-      id: 3,
+      id: "3",
       name: "Sinaloa",
       city: "Sinaloa", 
       state: "Culiacán",

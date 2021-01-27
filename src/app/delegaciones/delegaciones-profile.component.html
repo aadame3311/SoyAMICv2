@@ -13,7 +13,16 @@
                             {{delegacion.name}}
                         </div>
                     </span>
-                    <button class="btn btn-primary">Afiliate</button>
+                    <div class="profile-actions">
+                        <button class="btn btn-outline-primary">Afiliate</button>
+                        <button *ngIf="featureEnabled('follow')" 
+                                (click)='toggleLike($event, delegacion.id)'
+                                class="small-btn ml-3 btn" 
+                                [ngClass]='getFollowStyling("1", delegacion.id)'>
+                                
+                            <i-feather name="thumbs-up"></i-feather>
+                        </button>
+                    </div>
                 </div>
                 <div class="body">
                     <div class="phone">

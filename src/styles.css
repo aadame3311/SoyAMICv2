@@ -13,3 +13,10 @@ body {
     width: 10px;
     height: 10px;
 }
+.small-btn {
+    width: 50px !important;
+    padding: 5px !important;
+}
+button:active {
+    border-style: outset !important;
+}
