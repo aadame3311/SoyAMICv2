@@ -36,9 +36,8 @@ button:active {
     margin: 0;
 }
 .list-item .right {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
-    margin: 0;
 }
