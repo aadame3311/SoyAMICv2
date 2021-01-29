@@ -11,12 +11,15 @@ export class DelegacionesComponent implements OnInit {
 
   delegacionProfile : any 
   convenios : any[] = [{}]
+  delegacionId : string = "-1";
   posts : any[] = [{}]
+  directivos : any[] = [{}]
   profileVisible : boolean = false;
 
   constructor(private titleService : Title ) { 
     this.titleService.setTitle("soyAmic | Delegaciones")
     this.convenios = [{}]
+    this.directivos = [{}];
     this.delegacionProfile = {
       name: "Cargando",
       email: "Cargando",
@@ -26,59 +29,9 @@ export class DelegacionesComponent implements OnInit {
     }
   }
 
-  toggleProfileView() {
-    return {
-      display: (this.profileVisible)?'block':'none'
-    }
-  }
-  markerClickHandler(delegacion : any) {
+  markerClickHandler(delegacionId : any) {
     this.profileVisible = true;
-    this.delegacionProfile = delegacion;
-
-    let delegacionId = delegacion.id;
-    this.convenios = [
-      {
-        id: 1,
-        name: "convenio 1",
-      },
-      
-      {
-        id: 2,
-        name: "convenio 2",
-      },
-      {
-        id: 3,
-        name: "convenio 3",
-      },
-
-    ];
-
-    this.posts = [
-      {
-        id: 1,
-        source: 'facebook',
-        postDate: "1d",
-        body: `
-          Lorem ipsum dolor sit amet, 
-          consectetur adipiscing elit, 
-          sed do eiusmod tempor incididunt 
-          ut labore et dolore magna aliqua.
-        `,
-      },
-      
-      {
-        id: 2,
-        source: 'twitter',
-        postDate: "2d",
-        body: `
-          Lorem ipsum dolor sit amet, 
-          consectetur adipiscing elit, 
-          sed do eiusmod tempor incididunt 
-          ut labore et dolore magna aliqua.
-        `,
-      }
-
-    ]
+    this.delegacionId = delegacionId;
   }
 
   ngOnInit(): void {
