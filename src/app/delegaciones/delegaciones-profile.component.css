@@ -14,19 +14,27 @@
     margin-top: 16px;
     display: grid;
     gap: 16px;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-template-rows: auto;
     grid-template-areas: 
-        "profile-header profile-header profile-header profile-header"
-        "about about about about"
-        "directorio directorio directorio directorio"
-        "posts posts posts posts"
-        "convenios convenios convenios convenios"
+        "profile-header profile-header profile-header profile-header profile-header"
+        "about about about directivos directivos"
+        "asociados asociados asociados asociados asociados"
+        "posts posts posts posts posts"
+        "convenios convenios convenios convenios convenios"
     ;
 }
 .timestamp {
     font-size: 10px;
     opacity: 0.33;
+}
+.directivos { grid-area: directivos; }
+.directivos ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+.directivos ul li {
+    margin-left: 0;
 }
 
 .profile-details {
@@ -43,7 +51,7 @@
     
 }
 .about { grid-area: about; }
-.directorio { grid-area: directorio; }
+.asociados { grid-area: asociados; }
 .about-text { grid-column: 1 / span 3; }
 .posts-container { grid-area: posts; }
 .section {
@@ -105,4 +113,17 @@
 .file-name {
     display: inline-flex;
     align-items: center;
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-areas: 
+            "profile-header profile-header profile-header profile-header profile-header"
+            "about about about about about"
+            "directivos directivos directivos directivos directivos"
+            "asociados asociados asociados asociados asociados"
+            "posts posts posts posts posts"
+            "convenios convenios convenios convenios convenios"
+        ;
+    }
 }

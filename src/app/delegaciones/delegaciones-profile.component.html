@@ -1,4 +1,4 @@
-<div class="delegacion-profile">
+<div *ngIf="this.delegacionId !== '-1'" class="delegacion-profile">
     
     
 
@@ -15,7 +15,7 @@
                     </span>
                     <div class="profile-actions">
                         <button class="btn btn-outline-primary">Afiliate</button>
-                        <button *ngIf="featureEnabled('follow')" 
+                        <button *ngIf="featureEnabled()" 
                                 (click)='toggleLike($event, delegacion.id)'
                                 class="small-btn ml-3 btn" 
                                 [ngClass]='getFollowStyling("1", delegacion.id)'>
@@ -50,10 +50,27 @@
                 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
                 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </div>
-        
         </div>
 
-        <div class="section directorio">
+        <!-- doesn't need trackby here since we're not expecting many frquent changes if any-->
+        <div class="section directivos">
+            <h2>Directivos</h2>
+            <ul *ngFor="let directivo of directivos">
+                <li class="list-item ls-sm">
+                    <div class="left">
+                        <i-feather [style.width.px]='12' name="user"></i-feather>
+                        <div class="ml-2">
+                            {{directivo.name}}
+                        </div>
+                    </div>
+                    <div class="right">
+                        {{directivo.position}}
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section asociados">
             <h2>Directorio de Asociados</h2>
             <app-directorio></app-directorio>
         </div>
