@@ -6,7 +6,8 @@
     "config": "ts-node ./src/assets/scripts/set-env.ts",
     "start": "npm run config -- --environment=dev && ng serve -o",
     "build": "npm run config -- --environment=prod && ng build --prod",
-    "test:prod": "npm run config -- --environment=dev && ng test --browsers=ChromeHeadless --watch=false --code-coverage",
+    "test": "npm run config -- --environment=dev && ng test --browsers=ChromeHeadless --watch=false --code-coverage",
+    "bundle-stats": "npm run config -- --environment=dev && ng build --stats-json",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
