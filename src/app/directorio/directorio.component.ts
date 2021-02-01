@@ -9,13 +9,14 @@ import { NgForm } from '@angular/forms';
 export class DirectorioComponent implements OnInit {
 
   @Input() delegacionId! : String;
+  @Input() minified : boolean = false;
 
   constructor() { }
 
-  searchAsociados(f: NgForm, event : any, name:String, especialidadId:String) {
-    console.log('searching...');
+  searchAsociados(f: NgForm, event : any) {
     event.preventDefault();
-    console.log(f.value);
+
+    let delegacion_id = (f.value.delegacionId)?f.value.delegacionId:this.delegacionId;
   }
   
   ngOnInit(): void {

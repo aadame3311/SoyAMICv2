@@ -1,7 +1,5 @@
 <div *ngIf="this.delegacionId !== '-1'" class="delegacion-profile">
     
-    
-
     <div class="grid-container">
 
         <div class="section section-container header-section">
@@ -72,7 +70,7 @@
 
         <div class="section asociados">
             <h2>Directorio de Asociados</h2>
-            <app-directorio></app-directorio>
+            <app-directorio [delegacionId]='delegacion.id' [minified] = 'true'></app-directorio>
         </div>
 
         <!--display only 5 most recent posts-->
