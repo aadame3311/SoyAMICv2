@@ -9,16 +9,12 @@
             <input [(ngModel)]='this.searchForm.especialidadId' name="especialidadId" type="text" class="form-control" placeholder="Especialidad">
         </div>
         
+        <div *ngIf='!minified' class="form-group delegacion">
+            <input [(ngModel)]='this.searchForm.delegacionId' name="delegacionId" type="text" class="form-control" placeholder="Delegacion">
+        </div>
+
         <div class="form-group search">
             <button type="submit" class="btn btn-primary">Buscar</button>
         </div>
-
-        <div *ngIf='!minified' class="delegacion">
-            <input name="delegacionId" #delegacionId="ngModel" ngModel type="text" class="form-control" placeholder="Delegacion">
-        </div>
-        
-    </div>
-    <div class="search">
-        <button type="submit" class="btn btn-primary">Buscar</button>
     </div>
 </form>
