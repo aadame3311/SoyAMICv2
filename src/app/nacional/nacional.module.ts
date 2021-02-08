@@ -1,16 +1,20 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { SharedModule } from '../shared/shared.module';
+import { DirectorioModule } from '../directorio/directorio.module';
 import { NacionalRoutingModule } from './nacional-routing.module';
 
 import { NacionalComponent } from './nacional.component';
 
 @NgModule({
     imports: [
-        SharedModule,
+        CommonModule,
         NacionalRoutingModule,
+        DirectorioModule
     ],
     exports: [],
-    declarations: [NacionalComponent],
+    declarations: [
+        NacionalComponent,
+    ],
     providers: [],
 })
 export class NacionalModule { }

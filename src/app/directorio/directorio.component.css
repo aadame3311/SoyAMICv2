@@ -1,13 +1,35 @@
-.filters {
+.search-form {
     display: grid;
-    grid-template-columns: 1fr 0.7fr 0.3fr;
+    grid-template-columns: 1fr 0.2fr;
     gap: 16px;
 }
+.filters {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.filters * {
+    flex-grow: 0.5;
+    margin: 0 8px;
+}
+.search-bar { flex-grow: 4 !important; }
+
+
 .search button {
     width: 100%;
 }
 @media (max-width: 768px) {
     .filters {
+        flex-direction: column;
+    }
+    .filters * {
+        margin: 4px;
+    }
+    .search {
+        margin: 4px;
+    }
+    .search-form {
         grid-template-columns: 1fr;
     }
 }

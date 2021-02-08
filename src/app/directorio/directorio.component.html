@@ -1,10 +1,17 @@
+<<<<<<< HEAD
 <form #form="ngForm" 
     (ngSubmit)="searchAsociados(form, $event)">
+=======
+<form class="search-form form-group" 
+    #f="ngForm" 
+    (ngSubmit)="searchAsociados(f, $event)">
+>>>>>>> 7223f54c35edf78f0af94aa68aeaa17b2b7751f2
     <div class="filters">
 
         <div class="form-group search-bar">
             <input [(ngModel)]='this.searchForm.name' name="name" type="text" class="form-control" placeholder="Nombre de Asociado">
         </div>
+<<<<<<< HEAD
         <div class="form-group especialidad">
             <input [(ngModel)]='this.searchForm.especialidadId' name="especialidadId" type="text" class="form-control" placeholder="Especialidad">
         </div>
@@ -12,6 +19,19 @@
         <div class="form-group search">
             <button type="submit" class="btn btn-primary">Buscar</button>
         </div>
+=======
 
+        <div class="especialidad">
+            <input name="especialidadId" #especialidadId="ngModel" ngModel type="text" class="form-control" placeholder="Especialidad">
+        </div>
+>>>>>>> 7223f54c35edf78f0af94aa68aeaa17b2b7751f2
+
+        <div *ngIf='!minified' class="delegacion">
+            <input name="delegacionId" #delegacionId="ngModel" ngModel type="text" class="form-control" placeholder="Delegacion">
+        </div>
+        
+    </div>
+    <div class="search">
+        <button type="submit" class="btn btn-primary">Buscar</button>
     </div>
 </form>
