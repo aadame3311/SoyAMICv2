@@ -1,15 +1,15 @@
-<form class="form-group" 
-    #f="ngForm" 
-    (ngSubmit)="searchAsociados(f, $event, name.value, especialidadId.value)">
+<form #form="ngForm" 
+    (ngSubmit)="searchAsociados(form, $event)">
     <div class="filters">
-        <div class="search-bar">
-            <input name="name" #name="ngModel" ngModel type="text" class="form-control" placeholder="Nombre de Asociado">
+
+        <div class="form-group search-bar">
+            <input [(ngModel)]='this.searchForm.name' name="name" type="text" class="form-control" placeholder="Nombre de Asociado">
         </div>
-        <div class="especialidad">
-            <input name="especialidadId" #especialidadId="ngModel" ngModel type="text" class="form-control" placeholder="Especialidad">
+        <div class="form-group especialidad">
+            <input [(ngModel)]='this.searchForm.especialidadId' name="especialidadId" type="text" class="form-control" placeholder="Especialidad">
         </div>
         
-        <div class="search">
+        <div class="form-group search">
             <button type="submit" class="btn btn-primary">Buscar</button>
         </div>
 

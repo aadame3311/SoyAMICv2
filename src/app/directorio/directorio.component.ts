@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { SearchForm } from '../data/search-form';
 
 @Component({
   selector: 'app-directorio',
@@ -10,12 +11,19 @@ export class DirectorioComponent implements OnInit {
 
   @Input() delegacionId! : String;
 
+  //keep default copy of data in case we need to reset it
+  private _searchForm : SearchForm = {
+    name: '',
+    delegacionId: '1',
+    especialidadId: '1'
+  };
+  searchForm : SearchForm = { ...this._searchForm }
+
   constructor() { }
 
-  searchAsociados(f: NgForm, event : any, name:String, especialidadId:String) {
-    console.log('searching...');
-    event.preventDefault();
-    console.log(f.value);
+  searchAsociados(form: NgForm, event : any) {
+    console.log(this.searchForm);
+    this.searchForm = { ...this._searchForm };
   }
   
   ngOnInit(): void {
