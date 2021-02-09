@@ -4,7 +4,7 @@ import { environment } from './../../environments/environment';
 @Component({
   selector: 'app-delegaciones-profile',
   templateUrl: './delegaciones-profile.component.html',
-  styleUrls: ['./delegaciones-profile.component.css']
+  styleUrls: ['./delegaciones-profile.component.scss']
 })
 export class DelegacionesProfileComponent implements OnInit {
 

@@ -19,13 +19,22 @@
       <hr [ngStyle]='checkCurrentRoute()' class="nav-underline" />
     </ul>
   </div>
+  <div class="search asociado-search">
+    <mdb-form-control>
+      <input mdbInput type="text" id="form1" class="form-control" />
+      <label mdbLabel class="form-label" for="form1">Example label</label>
+    </mdb-form-control>
+  </div>
 </div>
 
 <app-under-construction></app-under-construction>
 
-<div class="site-container container">
+<div class="site-container">
   <!--page content here-->
   <div class="router-pane">
     <router-outlet></router-outlet>
+    
   </div>
 </div>
+
+

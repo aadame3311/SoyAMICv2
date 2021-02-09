@@ -13,6 +13,10 @@
     background-color: white;
     z-index: 100;
 }
+.asociado-search {
+    position: absolute;
+    right: 32px;
+}
 .brand {
     position: absolute;
     left: 32px;
@@ -53,7 +57,7 @@ hr.nav-underline {
 }
 
 .site-container {
-    margin-top: 150px;
+    margin: 130px 0;
 }
 
 .navigation-pane {

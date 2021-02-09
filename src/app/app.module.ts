@@ -10,10 +10,9 @@ import { InicioModule } from './inicio/inicio.module';
 import { NacionalModule } from './nacional/nacional.module';
 import { NavLinkComponent } from './shared/nav-link/nav-link.component';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+import { MdbModule } from 'mdb-angular-ui-kit';
 
-
-const materialImports : any = [
-]
 
 @NgModule({
   declarations: [
@@ -25,11 +24,12 @@ const materialImports : any = [
     CommonModule,
     BrowserModule,
     InicioModule,
-    NacionalModule,
+    // NacionalModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FontAwesomeModule,
-    ...materialImports,
+    HttpClientModule,
+    MdbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

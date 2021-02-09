@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { DelegacionesProfileComponent } from '../delegaciones/delegaciones-profile.component';
 import { DelegacionesComponent } from '../delegaciones/delegaciones.component';
 import { IconsModule } from '../shared/icons/icons.module';
-import { MapboxComponent } from '../shared/mapbox/mapbox.component';
+import { MapboxComponent } from '../shared/map/mapbox.component';
 import { InicioRoutingModule } from './inicio-routing.module';
 import { InicioComponent } from './inicio.component';
 import { DirectorioModule } from '../directorio/directorio.module';

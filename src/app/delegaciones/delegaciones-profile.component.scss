@@ -8,7 +8,7 @@
     border: 1px solid rgba(0, 0, 0, 0.33);
 }
 
-.delegacion-profile { margin-top: 16px; }
+.delegacion-profile { margin: 16px; }
 
 .grid-container {
     margin-top: 16px;
@@ -19,7 +19,6 @@
     grid-template-areas: 
         "profile-header profile-header profile-header profile-header profile-header"
         "about about about directivos directivos"
-        "asociados asociados asociados asociados asociados"
         "posts posts posts posts posts"
         "convenios convenios convenios convenios convenios"
     ;
@@ -51,7 +50,6 @@
     
 }
 .about { grid-area: about; }
-.asociados { grid-area: asociados; }
 .about-text { grid-column: 1 / span 3; }
 .posts-container { grid-area: posts; }
 .section {

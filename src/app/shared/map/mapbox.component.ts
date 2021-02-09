@@ -1,11 +1,11 @@
-import { environment } from './../../../environments/environment'
+import { environment } from '../../../environments/environment'
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import * as mapboxgl from 'mapbox-gl';
 
 @Component({
   selector: 'app-mapbox',
   templateUrl: './mapbox.component.html',
-  styleUrls: ['./mapbox.component.css']
+  styleUrls: ['./mapbox.component.scss']
 })
 export class MapboxComponent implements OnInit {
   map! : mapboxgl.Map;

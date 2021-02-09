@@ -4,7 +4,7 @@ import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-delegaciones',
   templateUrl: './delegaciones.component.html',
-  styleUrls: ['./delegaciones.component.css']
+  styleUrls: ['./delegaciones.component.scss']
 })
 export class DelegacionesComponent implements OnInit {
 
