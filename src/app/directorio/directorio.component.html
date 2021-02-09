@@ -1,9 +1,19 @@
 <form #form="ngForm" 
-    (ngSubmit)="searchAsociados(form, $event)">
+    (ngSubmit)="searchSubmit(form)">
     <div class="filters">
 
         <div class="form-group search-bar">
-            <input [(ngModel)]='this.searchForm.name' name="name" type="text" class="form-control" placeholder="Nombre de Asociado">
+            <input 
+                [(ngModel)]='this.searchForm.name' 
+                pattern="[a-zA-Z ]*"
+                [class.invalid-field]="form.submitted && form.invalid"
+                name="name" 
+                type="text" 
+                class="form-control" 
+                placeholder="Nombre de Asociado">
+            <div class="msg field-error" [hidden]="!form.submitted || form.valid">
+                formato invalido
+            </div>
         </div>
         <div class="form-group especialidad">
             <input [(ngModel)]='this.searchForm.especialidadId' name="especialidadId" type="text" class="form-control" placeholder="Especialidad">
@@ -14,7 +24,7 @@
         </div>
 
         <div class="form-group search">
-            <button type="submit" class="btn btn-primary">Buscar</button>
+            <button [disabled]="form.submitted && form.invalid" type="submit" class="btn btn-primary">Buscar</button>
         </div>
     </div>
 </form>

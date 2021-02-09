@@ -22,7 +22,13 @@ export class DirectorioComponent implements OnChanges {
 
   constructor() { }
 
-  searchAsociados(form: NgForm, event : any) {
+  searchSubmit(form: NgForm) {
+    //use SearchForm object since this includes delegacionId
+    //form.value won't include delegacionId
+    if (form.invalid) {
+      return;
+    }
+    
     console.log(this.searchForm);
   }
 
