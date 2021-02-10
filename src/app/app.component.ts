@@ -10,9 +10,14 @@ export class AppComponent implements OnInit {
   activeNavItem : any;
   navRoutes : any[] = [
     {
-      "routes": ['/inicio/delegaciones'],
+      "routes": ['/inicio'],
       "routeName": "Inicio",
       "marginLeftValue": "0%",
+    },
+    {
+      "routes": ['/delegaciones'],
+      "routeName": "Delegaciones",
+      "marginLeftValue": "50%",
     },
     // {
     //   "routes": ['/nacional'],

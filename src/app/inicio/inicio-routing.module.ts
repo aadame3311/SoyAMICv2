@@ -5,11 +5,11 @@ import { DelegacionesComponent } from '../delegaciones/delegaciones.component';
 import { DirectorioComponent } from '../directorio/directorio.component';
 import { InicioComponent } from './inicio.component';
 
-const routes : Route[] = [{ 
-    path: "inicio", component: InicioComponent, children: [{ 
-        path: "delegaciones", component: DelegacionesComponent 
-    }]
-}];
+const routes : Route[] = [
+    { path: "inicio", component: InicioComponent },
+    { path: "delegaciones", component: DelegacionesComponent}
+
+    ];
 
 @NgModule({
     imports: [
