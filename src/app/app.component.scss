@@ -28,7 +28,15 @@
     width: 70px;
 }
 .nav-elements {
-    width: 10vw;
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+
+}
+.nav-item {
+    display: inline;
+    text-align: center;
+    width: 90px;
 }
 ul {
     width: 100%;
@@ -48,9 +56,8 @@ a {
     text-decoration: none;
     color: #333;
 }
-.nav-item {
-    display: inline;
-    text-align: center;
+.nav-link {
+    width: 50%;
 }
 hr.nav-underline {
     height: .25rem;
