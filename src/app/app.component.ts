@@ -1,3 +1,4 @@
+import { NONE_TYPE } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -30,7 +31,7 @@ export class AppComponent implements OnInit {
 
   constructor() {}
 
-  //
+  //set style of nav hr underline depending on current route
   checkCurrentRoute() : any {
     let local_route = window.location.pathname;
     for(let navRoute of this.navRoutes) {
@@ -41,6 +42,10 @@ export class AppComponent implements OnInit {
         }
       }
     }
+
+    return {
+      "display": 'none'
+    };
   }
 
   //lifecycle hooks

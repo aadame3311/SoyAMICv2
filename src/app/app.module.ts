@@ -13,7 +13,9 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { MdbModule } from 'mdb-angular-ui-kit';
 import { SearchBarComponent } from './shared/search-bar/search-bar.component';
-
+import { FormsModule } from '@angular/forms';
+import { SearchResultsComponent } from './search-results/search-results.component'
+import { SearchResultsRoutingModule } from './search-results/search-results-routing.module';
 
 @NgModule({
   declarations: [
@@ -27,11 +29,13 @@ import { SearchBarComponent } from './shared/search-bar/search-bar.component';
     BrowserModule,
     InicioModule,
     // NacionalModule,
+    FormsModule,
+    SearchResultsRoutingModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FontAwesomeModule,
     HttpClientModule,
-    MdbModule
+    MdbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

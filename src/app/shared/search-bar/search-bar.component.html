@@ -1,4 +1,6 @@
-<div class="rounded-pill input">
-    <i class="icon mr-1 fas fa-search"></i>
-    <input class="search-input" type="text" placeholder="Buscar AMIC">
-</div>
+<form #form="ngForm" target="SearchResultsComponent" action="" (submit)="searchSubmit(form, $event)">
+    <div class="rounded-pill input">
+        <i class="icon mr-1 fas fa-search"></i>
+        <input [(ngModel)]="this.searchForm.name" ngModel name="name" class="search-input" type="text" placeholder="Buscar AMIC">
+    </div>
+</form>
