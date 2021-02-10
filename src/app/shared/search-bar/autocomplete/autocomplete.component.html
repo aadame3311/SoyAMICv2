@@ -1,0 +1,12 @@
+<div [ngClass]="(isVisible)?'autocomplete-fadein':'autocomplete-fadeout'"
+    class="auto-complete-container"
+    >
+    <div class="back-icon">
+        <i (click)="toggleView()" class="icon mr-1 fas fa-arrow-left"></i>
+    </div>
+    <div class="auto-complete">
+        <div class="results-container">
+           0 resultados...
+        </div>
+    </div>
+</div>

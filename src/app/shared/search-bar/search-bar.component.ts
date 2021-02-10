@@ -10,14 +10,17 @@ import { SearchService } from 'src/app/data/search.service';
   styleUrls: ['./search-bar.component.scss']
 })
 export class SearchBarComponent implements OnInit {
-
+  showAutoComplete : boolean = false;
   searchForm : SearchForm = {
     name: '',
     delegacionId: "0",
     especialidadIdList: ["0"]
   }
-  constructor(private router : Router) { }
 
+  constructor(private router : Router) { }
+  handleFocus(setFocus : boolean) {
+    this.showAutoComplete = setFocus;
+  }
   searchSubmit(form : NgForm, e : Event) {
     if (form.value.name !== '') {
       console.log("executing search...");

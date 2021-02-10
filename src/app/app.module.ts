@@ -14,8 +14,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { MdbModule } from 'mdb-angular-ui-kit';
 import { SearchBarComponent } from './shared/search-bar/search-bar.component';
 import { FormsModule } from '@angular/forms';
-import { SearchResultsComponent } from './search-results/search-results.component'
 import { SearchResultsRoutingModule } from './search-results/search-results-routing.module';
+import { AutocompleteComponent } from './shared/search-bar/autocomplete/autocomplete.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +23,7 @@ import { SearchResultsRoutingModule } from './search-results/search-results-rout
     NavLinkComponent,
     UnderConstructionComponent,
     SearchBarComponent,
+    AutocompleteComponent,
   ],
   imports: [
     CommonModule,

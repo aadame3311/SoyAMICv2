@@ -1,3 +1,5 @@
+@import '../global.scss';
+
 .navbar-container {
     position: fixed;
     top: 0;
@@ -23,8 +25,10 @@
     flex-direction: row;
     align-items: center;
     left: 32px;
+    z-index: 0;
 }
 .navbar-brand {
+    z-index: -2;
     width: 70px;
 }
 .nav-elements {
@@ -63,7 +67,7 @@ hr.nav-underline {
     height: .25rem;
     width: 50%;
     margin: 0;
-    background: #4285F4;
+    background: $main-blue;
     border: none;
     border-radius: 50px;
     transition: .2s ease-in-out;
