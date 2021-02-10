@@ -12,6 +12,7 @@ import { NavLinkComponent } from './shared/nav-link/nav-link.component';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { MdbModule } from 'mdb-angular-ui-kit';
+import { SearchBarComponent } from './shared/search-bar/search-bar.component';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { MdbModule } from 'mdb-angular-ui-kit';
     AppComponent,
     NavLinkComponent,
     UnderConstructionComponent,
+    SearchBarComponent,
   ],
   imports: [
     CommonModule,

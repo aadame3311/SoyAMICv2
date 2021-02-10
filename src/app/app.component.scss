@@ -4,8 +4,8 @@
     width: 100%;
     overflow: hidden;
 
-    padding: 16px;
-    margin: 0 auto;
+    padding: 8px;
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -13,13 +13,19 @@
     background-color: white;
     z-index: 100;
 }
-.asociado-search {
-    position: absolute;
-    right: 32px;
+.form-outline {
+    
 }
+
 .brand {
     position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     left: 32px;
+}
+.navbar-brand {
+    width: 70px;
 }
 .nav-elements {
     width: 10vw;
@@ -58,7 +64,7 @@ hr.nav-underline {
 }
 
 .site-container {
-    margin: 130px 0;
+    margin: 110px 0;
 }
 
 .navigation-pane {
@@ -72,3 +78,6 @@ hr.nav-underline {
 }
 
 
+.placeholder {
+    opacity: 0.70;
+}

@@ -3,7 +3,12 @@
     <a href="#" class="navbar-brand">
       <img src="../assets/images/logo.png" alt="AMIC Logo" [style.width.px]="50">
     </a>
+    
+    <div class='amic-search'>
+      <app-search-bar></app-search-bar>
+    </div>
   </div> 
+
   <div class="nav-elements">
     <ul>
       <li *ngFor="let navRoute of navRoutes" class="nav-item">
@@ -19,12 +24,7 @@
       <hr [ngStyle]='checkCurrentRoute()' class="nav-underline" />
     </ul>
   </div>
-  <div class="search asociado-search">
-    <mdb-form-control>
-      <input mdbInput type="text" id="asociado-search" class="form-control" />
-      <label mdbLabel class="form-label" for="asociado-search">Buscar Asociados</label>
-    </mdb-form-control>
-  </div>
+
 </div>
 
 <app-under-construction></app-under-construction>
