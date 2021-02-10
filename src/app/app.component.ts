@@ -12,12 +12,14 @@ export class AppComponent implements OnInit {
     {
       "routes": ['/inicio'],
       "routeName": "Inicio",
-      "marginLeftValue": "0%",
+      "marginLeftValue": "12.5%",
+      "widthValue": "50px",
     },
     {
       "routes": ['/delegaciones'],
       "routeName": "Delegaciones",
       "marginLeftValue": "50%",
+      "widthValue": "100px",
     },
     // {
     //   "routes": ['/nacional'],
@@ -34,7 +36,8 @@ export class AppComponent implements OnInit {
     for(let navRoute of this.navRoutes) {
       if (navRoute.routes.includes(local_route)) {
         return {
-          "margin-left": navRoute.marginLeftValue
+          "margin-left": navRoute.marginLeftValue,
+          "width": navRoute.widthValue
         }
       }
     }
