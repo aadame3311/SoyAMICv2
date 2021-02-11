@@ -31,6 +31,7 @@ export class DelegacionesComponent implements OnInit {
   markerClickHandler(delegacionId : any) {
     this.profileVisible = true;
     this.delegacionId = delegacionId;
+   
   }
 
   ngOnInit(): void {

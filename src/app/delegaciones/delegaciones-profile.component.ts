@@ -52,16 +52,16 @@ export class DelegacionesProfileComponent implements OnInit {
   convenios : any = [
     {
       id: 1,
-      name: "convenio 1",
+      description: "convenio 1",
     },
     
     {
       id: 2,
-      name: "convenio 2",
+      description: "convenio 2",
     },
     {
       id: 3,
-      name: "convenio 3",
+      description: "convenio 3",
     },
 
   ];
@@ -70,7 +70,7 @@ export class DelegacionesProfileComponent implements OnInit {
       id: "1",
       source: 'facebook',
       postDate: "1d",
-      body: `
+      description: `
         Lorem ipsum dolor sit amet, 
         consectetur adipiscing elit, 
         sed do eiusmod tempor incididunt 
@@ -82,7 +82,7 @@ export class DelegacionesProfileComponent implements OnInit {
       id: "2",
       source: 'twitter',
       postDate: "2d",
-      body: `
+      description: `
         Lorem ipsum dolor sit amet, 
         consectetur adipiscing elit, 
         sed do eiusmod tempor incididunt 

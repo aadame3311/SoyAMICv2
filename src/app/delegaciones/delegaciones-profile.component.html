@@ -1,5 +1,7 @@
-<div *ngIf="this.delegacionId !== '-1'" class="delegacion-profile">
-    
+<div *ngIf="this.delegacionId !== '-1'" class="container delegacion-profile">
+    <div class="header-image">
+        
+    </div>
     <div class="grid-container">
 
         <div class="section section-container header-section">
@@ -39,6 +41,23 @@
             </div>
         </div>
 
+        <!-- doesn't need trackby here since we're not expecting many frquent changes if any-->
+        <div class="directivos-container">
+            <h2>Directivos</h2>
+            <ul>
+                <li *ngFor="let directivo of directivos" class="directivo-item">
+                    <div class="left">
+                        <i class="icon fas fa-user"></i>
+                        <div class="ml-3">
+                            {{directivo.name}}
+                        </div>
+                    </div>
+                    <div class="right">
+                        {{directivo.position}}
+                    </div>
+                </li>
+            </ul>
+        </div>
         
         <div class="section about">
             <h2>Acerca de</h2>    
@@ -50,54 +69,25 @@
             </div>
         </div>
 
-        <!-- doesn't need trackby here since we're not expecting many frquent changes if any-->
-        <div class="section directivos">
-            <h2>Directivos</h2>
-            <ul *ngFor="let directivo of directivos">
-                <li class="list-item ls-sm">
-                    <div class="left">
-                        <i-feather [style.width.px]='12' name="user"></i-feather>
-                        <div class="ml-2">
-                            {{directivo.name}}
-                        </div>
-                    </div>
-                    <div class="right">
-                        {{directivo.position}}
-                    </div>
-                </li>
-            </ul>
-        </div>
+        
         
         <!--display only 5 most recent posts-->
         <div class="posts-container">
             <h1>Noticias</h1>
-            <div *ngFor="let post of posts" class="posts">
-                <div class="post list-item">
-                    <div class="left">
-                        <i-feather name={{post.source}}></i-feather>
-                        <span class="ml-3 body">
-                            {{post.body}}
-                        </span>
-                    </div>
-                    <div class="right timestamp">
-                        <span>{{post.postDate}}</span>
-                    </div>
-                </div>
-            </div>
+            <app-list-item
+                [items] = "posts"
+                [leftIconClass] = "'fa-hashtag'"
+                ></app-list-item>
         </div>
 
         <div class="convenios">
             <h1>Convenios</h1>
             <ul class="convenio-list">
-                <li *ngFor="let convenio of convenios" class="convenio-item list-item">
-                    <div class="left">
-                        <div><i-feather style="width: 20px; height: 20px" name="file"></i-feather></div>
-                        <div class="ml-3 file-name">{{convenio.name}}</div>
-                    </div>
-                    <div class="right">
-                        <i-feather style="width: 20px; height: 20px" name="download"></i-feather>
-                    </div>
-                </li>
+                <app-list-item
+                    [items] = "convenios"
+                    [leftIconClass] = "'fa-file-pdf'"
+                    [rightIconClass] = "'fa-download'"
+                ></app-list-item>
             </ul>
         </div>
     </div>

@@ -1,5 +1,5 @@
 import { environment } from '../../../environments/environment'
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, ElementRef, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
 import * as mapboxgl from 'mapbox-gl';
 
 @Component({
@@ -12,6 +12,8 @@ export class MapboxComponent implements OnInit {
   style = 'mapbox://styles/mapbox/streets-v11';
   initialLongitude = -101;
   initialLatitude = 24;
+  
+  @ViewChild('mapContainer', { static: true}) mapContainer! : ElementRef;
   @Output() markerOnClick : EventEmitter<any> = new EventEmitter<any>();
   
   delegacionesLocationData : any = [
@@ -49,6 +51,11 @@ export class MapboxComponent implements OnInit {
       let $marker = document.createElement('div');
       $marker.className = 'custom-marker';
       $marker.addEventListener('click', () => {
+        setTimeout(() => {
+          if (this.mapContainer != null) {
+            window.scroll(0, this.mapContainer.nativeElement.offsetHeight+15);
+          }
+        }, 100)
         this.markerOnClick.emit(delegacionLocation.id);
       });
 

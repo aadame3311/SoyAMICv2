@@ -7,6 +7,7 @@ import { InicioRoutingModule } from './inicio-routing.module';
 import { InicioComponent } from './inicio.component';
 import { DirectorioModule } from '../directorio/directorio.module';
 import { CommonModule } from '@angular/common';
+import { ListItemComponent } from '../shared/list-item/list-item.component';
 
 @NgModule({
     imports: [
@@ -22,7 +23,7 @@ import { CommonModule } from '@angular/common';
         DelegacionesComponent,
         DelegacionesProfileComponent,
         MapboxComponent,
-        
+        ListItemComponent,
     ],
     providers: [],
 })

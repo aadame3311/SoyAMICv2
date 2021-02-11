@@ -16,6 +16,7 @@ import { SearchBarComponent } from './shared/search-bar/search-bar.component';
 import { FormsModule } from '@angular/forms';
 import { SearchResultsRoutingModule } from './search-results/search-results-routing.module';
 import { AutocompleteComponent } from './shared/search-bar/autocomplete/autocomplete.component';
+import { ListItemComponent } from './shared/list-item/list-item.component';
 
 @NgModule({
   declarations: [
