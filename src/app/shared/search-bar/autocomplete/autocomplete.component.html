@@ -6,10 +6,10 @@
     </div>
     <div class="auto-complete">
         <div class="results-container">
-           <span
+           <div class="no-results"
                 *ngIf="autocompleteList==undefined || autocompleteList.length == 0; else autocompleteItems" >
                 0 resultados...
-           </span>
+           </div>
            <ng-template #autocompleteItems>
                <ul>
                    <li (click)="handleAutocompleteItemClick($event)" class="autocomplete-item" *ngFor="let autocompleteItem of autocompleteList">

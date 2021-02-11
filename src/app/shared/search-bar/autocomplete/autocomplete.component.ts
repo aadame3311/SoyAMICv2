@@ -18,7 +18,6 @@ export class AutocompleteComponent implements OnInit {
     this.onAutocompleteClick.emit($event);
   }
   ngOnInit(): void {
-    console.log(this.autocompleteList);
   }
 
 }

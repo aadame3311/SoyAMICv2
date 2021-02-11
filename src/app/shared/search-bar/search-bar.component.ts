@@ -29,15 +29,12 @@ export class SearchBarComponent implements OnInit {
 
     this.searchForm.name = autocompleteText;
 
-    console.log('submitting');
     $form.value.name = this.searchForm.name;
     this.searchSubmit($form, $event);
   }
   searchSubmit(form : NgForm, e : Event) {
-    console.log('submitted');
-    console.log(form.value.name);
+
     if (form.value.name !== '') {
-      console.log("executing search...");
       
       //update recent searches
       if (this.recentSearches != undefined) {
@@ -48,7 +45,6 @@ export class SearchBarComponent implements OnInit {
         localStorage.setItem('recent-searches', this.recentSearches.toString());
       }
       
-      console.log('localstorage', localStorage.getItem('recent-searches'));
       //navigate to search results page
       this.router.navigate([`/resultados`, this.searchForm.name])
       return;
@@ -61,10 +57,12 @@ export class SearchBarComponent implements OnInit {
     return localStorage.getItem('recent-searches')?.split(',');
   }
   ngOnInit(): void {
+    localStorage.clear();
+
     //get recent searches
     this.recentSearches = this.fetchRecentChanges();
     if (this.recentSearches == undefined) {
-      this.recentSearches = [''];
+      this.recentSearches = [];
     }
   }
 

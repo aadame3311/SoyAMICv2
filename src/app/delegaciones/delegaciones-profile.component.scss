@@ -53,6 +53,7 @@
 .about-text { grid-column: 1 / span 3; }
 .posts-container { grid-area: posts; }
 .section {
+    border-radius: 16px;
     background-color: white;
     border:0.5px solid rgba(0, 0, 0, 0.1);
     padding: 64px;
@@ -107,7 +108,9 @@
     list-style-type: none;
     padding: 0 !important;
 }
-
+.list-item {
+    border-radius: 16px;
+}
 .file-name {
     display: inline-flex;
     align-items: center;

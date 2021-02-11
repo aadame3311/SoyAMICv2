@@ -53,6 +53,10 @@ ul {
     margin-bottom: 8px;
     padding: 8px 32px;
 }
+.no-results {
+    text-align: center;
+    padding: 8px;
+}
 .autocomplete-item:hover {
     cursor: pointer;
     background-color: $main-blue;
