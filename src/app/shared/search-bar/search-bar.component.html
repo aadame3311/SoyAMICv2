@@ -13,5 +13,8 @@
         >
     </div>
 
-    <app-autocomplete [isVisible]="showAutoComplete"></app-autocomplete>
+    <app-autocomplete 
+        (onAutocompleteClick)="handleAutocompleteClick(form, $event)"
+        [autocompleteList]="recentSearches" 
+        [isVisible]="showAutoComplete"></app-autocomplete>
 </form>

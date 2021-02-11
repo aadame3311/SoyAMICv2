@@ -6,7 +6,19 @@
     </div>
     <div class="auto-complete">
         <div class="results-container">
-           0 resultados...
+           <span
+                *ngIf="autocompleteList==undefined || autocompleteList.length == 0; else autocompleteItems" >
+                0 resultados...
+           </span>
+           <ng-template #autocompleteItems>
+               <ul>
+                   <li (click)="handleAutocompleteItemClick($event)" class="autocomplete-item" *ngFor="let autocompleteItem of autocompleteList">
+                    <i class="icon mr-1 fas fa-clock"></i>
+                    {{ autocompleteItem }}
+                   </li>
+               </ul>
+           </ng-template>
         </div>
+
     </div>
 </div>

@@ -10,20 +10,20 @@ import { SearchService } from '../data/search.service';
 })
 export class SearchResultsComponent implements OnInit {
 
+  searchForm : SearchForm = {
+    name: '',
+    delegacionId: '0',
+    especialidadIdList: ['0']
+  };
   constructor(private searchService : SearchService, private activatedRoute : ActivatedRoute) { }
 
   ngOnInit(): void {
     console.log('search results page OnInit');
-    let searchForm : SearchForm = {
-      name: '',
-      delegacionId: '0',
-      especialidadIdList: ['0']
-    };
     this.activatedRoute.params.subscribe(params => {
-      searchForm.name=params['name']
+      this.searchForm.name=params['name']
       
       //call search service
-      this.searchService.postSearchForm(searchForm).subscribe(
+      this.searchService.postSearchForm(this.searchForm).subscribe(
         success => console.log(success),
         error => console.log(error)
       )
