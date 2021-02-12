@@ -31,14 +31,14 @@
     margin-top: 16px;
     display: grid;
     gap: 16px;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
     
     grid-template-areas: 
-        "profile-header profile-header profile-header profile-header profile-header profile-header"
-        "about about about about about about"
-        "directivos directivos directivos directivos directivos directivos"
-        "posts posts posts convenios convenios convenios"
+        "profile-header profile-header"
+        "about about "
+        "directivos directivos "
+        "posts convenios"
     ;
 }
 .timestamp {
@@ -154,12 +154,12 @@
 @media (max-width: 768px) {
     .grid-container {
         grid-template-areas: 
-            "profile-header profile-header profile-header profile-header profile-header"
-            "about about about about about"
-            "directivos directivos directivos directivos directivos"
-            "asociados asociados asociados asociados asociados"
-            "posts posts posts posts posts"
-            "convenios convenios convenios convenios convenios"
+            "profile-header profile-header"
+            "about about"
+            "directivos directivos"
+            "asociados asociados"
+            "posts posts"
+            "convenios convenios"
         ;
     }
     .profile-details .header {
