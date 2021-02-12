@@ -1,16 +1,19 @@
 .profile-img {
-    width: 10vw;
-    height: 10vw;
+    width: 150px;
+    height: 150px;
     
     background-size: cover;
     background-position: center;
     padding: 8px;
     border: 1px solid rgba(0, 0, 0, 0.33);
 }
-
-.header-image {
+.delegacion-profile {
+    min-width: 1000px;
+}
+.profile-banner {
     background: url('https://i.pinimg.com/originals/0b/a3/d6/0ba3d60362c7e6d256cfc1f37156bad9.jpg');
     width: 100%;
+    min-width: 1000px;
     height: 30vh;
     position: absolute;
     top: transform(top)-50px;
@@ -30,6 +33,7 @@
     gap: 16px;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: auto;
+    
     grid-template-areas: 
         "profile-header profile-header profile-header profile-header profile-header profile-header"
         "about about about about about about"
@@ -71,7 +75,7 @@
     height: 100%;
     display: grid;
     gap: 16px;
-    grid-template-rows: 0.2fr 1fr;
+    grid-template-rows: auto 1fr;
 }
 .profile-info {
     font-size: 10px;
@@ -110,6 +114,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 8px;
+    height: 100px;
 }
 .profile-details .body {
     display: grid;
@@ -122,11 +127,11 @@
 }
 .value { font-weight: bold; }
 
-.header-title { font-size: 2vw; }
+.header-title { 
+    font-size: 50px; 
+}
 .header-section {
     grid-area: profile-header;
-    background-color: white;
-    padding: 64px;
     display: grid;
     gap: 16px;
     grid-template-columns: 0.10fr 1fr;
@@ -156,5 +161,13 @@
             "posts posts posts posts posts"
             "convenios convenios convenios convenios convenios"
         ;
+    }
+    .profile-details .header {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .profile-details {
+        grid-auto-rows: 600px;
     }
 }
