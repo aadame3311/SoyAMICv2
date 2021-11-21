@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
-import { environment } from './../../environments/environment';
+import { Environment } from './../../environments/environment';
 
 @Component({
   selector: 'app-delegaciones-profile',
@@ -117,7 +117,7 @@ export class DelegacionesProfileComponent implements OnInit {
   }
 
   featureEnabled() : Boolean {
-    return environment.features.enableFollowFeature;
+    return Environment.featureFlags.enableFollowFeature;
   }
 
   toggleLike(event : MouseEvent, delegacionId : String) {

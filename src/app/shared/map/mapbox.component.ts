@@ -1,4 +1,4 @@
-import { environment } from '../../../environments/environment'
+import { Environment } from '../../../environments/environment'
 import { Component, ElementRef, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
 import * as mapboxgl from 'mapbox-gl';
 
@@ -38,7 +38,7 @@ export class MapboxComponent implements OnInit {
   
   ngOnInit() {
     this.map = new mapboxgl.Map({
-      accessToken: environment.mapbox.accessToken,
+      accessToken: Environment.mapbox.accessToken,
       container: 'map',
       style: this.style,
       zoom: 4,
